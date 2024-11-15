@@ -1,0 +1,226 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+/* General styling for pre elements */
+pre {
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace; /* Set font family to Courier New */
+}
+
+/* Title styling */
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Simulation container styles */
+.simulation-container {
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+}
+
+/* Memory simulation and process simulation styles */
+
+.process-simulation {
+    border: 1px solid gray;
+    flex: 1;
+    margin-right: 3px;
+    box-shadow: 1px 1px 4px rgb(36, 35, 35);
+    border-radius: 5px;
+    margin-top: 10px;
+
+
+}
+
+.memory-simulation {
+    border: 1px solid gray;
+    flex: 1;
+    margin-right: 8px;
+    box-shadow: 1px 1px 4px rgb(36, 35, 35);
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+/* Result output container styles */
+.result-output {
+    margin-left: 6px;
+    height: 446px;
+    border: solid;
+    width: 840px;
+    background-color: rgb(59, 59, 59);
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    border-collapse: collapse;
+    position: relative;
+}
+
+/* Result table styles */
+.result2-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.result2-output th, .result2-output td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Courier New', monospace; /* Set font family to Courier New */
+}
+
+.result2-output th {
+    background-color: #f2f2f2;
+}
+
+.result2-output p {
+    margin: 0;
+    padding: 5px;
+    font-family: 'Courier New', monospace; /* Set font family to Courier New */
+}
+
+/* Memory partition styles */
+.memory-partition, .memory-partitions-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+
+/* Output step and frame styles */
+.output-step {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.output-frame {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Additional styling for fixed partition */
+.fixed-partition {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* Vertically and horizontally align average waiting time and average turnaround time */
+.average-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(59, 59, 59);
+}
+
+.average-info p {
+    margin: 0;
+    padding: 5px;
+    font-family: 'Courier New', monospace; /* Set font family to Courier New */
+}
+
+.avg-time {
+    border: 1px;
+    box-shadow: 0.5px 0.5px 2px rgb(97, 96, 96);
+    
+}
+
+.input-container {
+    border: 1px solid gray;
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 4px rgb(36, 35, 35);
+    border-radius: 5px;
+
+}
+
+.output-container {
+    border: 1px solid gray;
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 4px rgb(36, 35, 35);
+    border-radius: 5px;
+
+}
+
+.solve-button {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 10px; 
+    width: calc(100% - 20px); 
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(34, 34, 34);
+}
+
+
+
+
+.input, .output {
+    font-size: 27px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: center;
+
+}
+
+.algorithm, .at, .bt, .tq {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.burst-time {
+    padding-right: 509px;
+}
+
+.arrival-time {
+    padding-right: 485px;
+}
+
+.drop-down {
+    padding-right: 475px;
+}
+
+.fit {
+    padding-right: 625px;
+}
+
+.partition {
+    padding-right: 449px;
+}
+
+.job {
+    padding-right: 521px;
+}
+
+.frames {
+    padding-right: 449px;
+}
+
+.pages {
+    padding-right: 569px;
+}

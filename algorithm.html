@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="algorithm.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <!-- MEMORY MANAGEMENT -->
+    <div class="simulation-container">
+        <div class="memory-simulation">
+            <div class="title">
+                Memory Management Simulation
+            </div>
+
+            
+            <div>
+                <!-- FIXED PARTITION -->
+                <div class="input-container"> 
+                    <div class="input"> 
+                        Fixed Partition
+                    </div>
+
+                    <div>
+                        <p class="algorithm">
+                            Algorithm
+                        </p>
+                        <select class="fit" id="algorithmSelect" class="drop-down">
+                            <option value="firstFit">First Fit</option>
+                            <option value="bestFit">Best Fit</option>
+                            <option value="worstFit">Worst Fit</option>
+                        </select> 
+                    </div>
+                
+                    <div>
+                        <p class="at">
+                            Partition Sizes:
+                        </p>
+                        <input type="text" id="partitionSizesInput" class ="partition" placeholder="e.g. 1 2 3 4 5">
+                    </div>
+                    
+                    <div>
+                        <p class="bt">
+                            Job Sizes:
+                        </p>
+                        <input type="text" id="processSizesInput" class ="job" placeholder="e.g. 1 2 3 4 5">
+                    </div>
+
+                    <div>
+                        <button class="solve-button" onclick="allocateJobs()">Allocate</button>
+                    </div>
+                </div>
+
+                <!-- FIXED PARTITION -->
+                <div class="input-container"> 
+                    <div class="input"> 
+                        First-In-First-Out
+                    </div>
+                
+                    <div>
+                        <p class="at">
+                            Number of Frames
+                        </p>
+                        <input class="frames" type="number" id="numFrames" min="1" value="3">
+                    </div>
+                    
+                    <div>
+                        <p class="bt">
+                            Pages:
+                        </p>
+                        <input type="text" id="pageString" class ="pages" placeholder="e.g. 1 2 3 4 5">
+                    </div>
+
+                    <div>
+                        <button class="solve-button" onclick="simulateFIFO()">Simulate FIFO</button>
+                    </div>
+                </div>
+                <div id="output"></div>
+                <div id="output2"></div>
+            </div>
+        </div>
+
+        <!-- PROCESS SIMULATION -->
+        <div class="process-simulation">
+            <div class="title">
+                Processor Scheduling Simulation
+            </div>
+            <div class="input-container">
+                <div class="input">
+                    Input
+                </div>
+                <div>
+                    <p class="algorithm">
+                        Algorithm: 
+                    </p>
+                    <label  for="scheduling-algorithm"></label>
+                    <select class="drop-down" name="scheduling-algorithm" id="scheduling-algorithm" onchange="toggleTimeQuantumInput()">
+                        <option value="fcfs">First-Come-First-Served (FCFS)</option>
+                        <option value="rr">Round Robin (RR)</option>
+                    </select>
+                </div>
+                <div id="time-quantum-input" style="display: none;">
+                    <p class="tq">
+                        Time Quantum: 
+                    </p>
+                    <input class="time-quantum" id="time-quantum" placeholder="e.g. 2">
+                </div>
+                <div>
+                    <p class="at">
+                        Arrival Time: 
+                    </p>
+                    <input id="arrival-time-scheduling" class="arrival-time" placeholder="e.g. 0 1 2 3 4">
+                </div>
+                <div>
+                    <p class="bt">
+                        Burst Time: 
+                    </p>
+                    <input id="burst-time-scheduling" class="burst-time" placeholder="e.g. 5 6 7 8 9">
+                </div>
+                <div>
+                    <button class="solve-button" onclick="solveScheduling()">
+                        Solve
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="output-container">
+                <p class="output">
+                    Output
+                </p>
+                <pre class="result2-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="process-management.js"></script>
+    <script src="fixed-partition.js"></script> 
+    <script src="first-in-first-out.js"></script>
+</body>
+</html>
